@@ -73,28 +73,38 @@
       <div class="card pad">
         <h2>Get early access</h2>
         <p class="muted">Join the waitlist for early-bird pricing, first access to rooms, and a free “7-Day Nervous-System Reset.”</p>
-        <form id="wl" class="cta" action="" method="post" autocomplete="on">
-          <div>
-            <label for="name">Full name</label>
-            <input id="name" name="name" required />
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required />
-          </div>
-          <div>
-            <label for="interest">What’s your primary goal?</label>
-            <select id="interest" name="interest" required>
-              <option value="">Choose…</option>
-              <option>Stress reduction & resilience</option>
-              <option>Peak performance & focus</option>
-              <option>Recovery & sleep</option>
-              <option>Community & adventure</option>
-            </select>
-          </div>
-          <button type="submit">Join the Waitlist</button>
-          <small class="muted">We’ll never spam. Unsubscribe anytime.</small>
-        </form>
+        
+        
+        <!-- START MailerLite -->
+<link rel="preconnect" href="https://assets.mailerlite.com">
+<script>
+  // Optional: push UTM params into a hidden field
+  function getParam(n){return new URLSearchParams(location.search).get(n)||'';}
+  document.addEventListener('DOMContentLoaded',function(){
+    const utm = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+    const store = Object.fromEntries(utm.map(k=>[k,getParam(k)]));
+    window.__TV_UTM__ = store;
+  });
+</script>
+
+<div class="card pad" id="waitlist">
+  <h2>Get early access</h2>
+  <p class="muted">Join the waitlist for early-bird pricing, first access to rooms, and a free “7-Day Nervous-System Reset.”</p>
+
+  <!-- Replace data-form with your MailerLite form ID -->
+  <script src="https://assets.mailerlite.com/js/universal.js" data-form="YOUR_MAILERLITE_FORM_ID" async></script>
+
+  <!-- Hidden UTM passthrough (optional: map in ML with custom fields) -->
+  <form style="display:none">
+    <input type="hidden" name="utm_source" value="<script>document.write(window.__TV_UTM__?.utm_source||'')</script>">
+    <input type="hidden" name="utm_medium" value="<script>document.write(window.__TV_UTM__?.utm_medium||'')</script>">
+    <input type="hidden" name="utm_campaign" value="<script>document.write(window.__TV_UTM__?.utm_campaign||'')</script>">
+    <input type="hidden" name="utm_content" value="<script>document.write(window.__TV_UTM__?.utm_content||'')</script>">
+    <input type="hidden" name="utm_term" value="<script>document.write(window.__TV_UTM__?.utm_term||'')</script>">
+  </form>
+</div>
+<!-- END MailerLite -->
+
         <div id="thanks" class="muted" style="display:none;margin-top:10px;">
           ✅ You’re on the list! Check your inbox for the “7-Day Nervous-System Reset.”
         </div>

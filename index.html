@@ -2,61 +2,70 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Tenable Vibrations — Costa Rica Retreat • Jan 15–18, 2026</title>
-<meta name="description" content="Breathwork • Cold • Nature • Purpose. Join the waitlist and try our interactive tools to get your personalized path." />
+<title>Tenable Vibrations — Costa Rica Retreat • Jan 15–18, 2026 (v-CR-006)</title>
+<meta name="description" content="Light, airy, tropical vibes. Join the waitlist and try our interactive tools for your personalized path to calm & focus." />
 <meta property="og:title" content="Tenable Vibrations — Costa Rica Retreat" />
 <meta property="og:description" content="Reset your nervous system in Costa Rica. Get your personalized plan now." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1600&auto=format&fit=crop" />
-<meta name="theme-color" content="#0b2f2f" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" />
+<meta name="theme-color" content="#F7EFE6" />
 <link rel="preconnect" href="https://images.unsplash.com">
 
 <style>
-  /* ====== Tropical Theme (higher contrast) ====== */
+  /* ====== Light Tropical Theme (Tulum-ish) ====== */
   :root{
-    --bg:#052b2b;         /* deep teal */
-    --bg2:#0a3f3f;
-    --hero-overlay: rgba(2,12,12,.68); /* darker overlay for readability */
-    --card: rgba(7,20,22,.82);  /* darker glass for legibility */
-    --solid: #0b2223;
-    --line: rgba(255,255,255,.18);
-    --text:#f6fbff;
-    --muted:#c7e4e4;
-    --accent:#7ef7d6;     /* aqua */
-    --accent2:#ffd07a;    /* sun */
-    --rose:#ff9aa2;
-    --shadow: 0 18px 50px rgba(0,0,0,.45);
+    /* palette */
+    --sand:#FFF7EE;
+    --seafoam:#E9FFF5;
+    --aqua:#79E8D3;
+    --teal:#1F6E68;
+    --coral:#FF9E8A;
+    --sun:#FFC876;
+    --leaf:#7BCB9B;
+    --ink:#1F3A39;       /* primary text (dark teal/ink) */
+    --muted:#5E8E8A;     /* secondary text */
+    /* surfaces */
+    --bg-grad: linear-gradient(180deg,#FFF7EE 0%, #F3FFF9 100%);
+    --hero-veil: rgba(255,255,255,.78);  /* soft white veil for readability */
+    --card:#FFFFFF;       /* solid white cards for clarity */
+    --line: rgba(0,0,0,.08);
+    --shadow: 0 18px 45px rgba(31,58,57,.08);
   }
   *{box-sizing:border-box}
   html,body{
-    margin:0;padding:0;color:var(--text);
+    margin:0;padding:0;color:var(--ink);
     font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-    background:var(--bg)
+    background:var(--bg-grad)
   }
-  a{color:var(--accent);text-decoration:none}
+  a{color:var(--teal);text-decoration:none}
   .wrap{max-width:1160px;margin:0 auto;padding:22px}
   .nav{
     position:sticky;top:0;z-index:50;
-    background:linear-gradient(180deg,rgba(0,0,0,.7),rgba(0,0,0,.25));
+    background:rgba(255,255,255,.65);
     backdrop-filter: blur(8px);
+    border-bottom:1px solid var(--line);
   }
   .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
   .brand{display:flex;align-items:center;gap:10px}
-  .brand .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#5ae9ff);box-shadow:0 0 0 3px rgba(126,247,214,.25)}
-  .brand b{letter-spacing:.3px}
-  .links a{margin-left:14px;font-weight:700;opacity:.95}
+  .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--aqua),#B4FFE9);box-shadow:0 0 0 3px rgba(121,232,211,.35)}
+  .links a{margin-left:14px;font-weight:700;opacity:.9}
+  /* Hero */
   .hero{
     position:relative; isolation:isolate;
     background:
-      linear-gradient(180deg,var(--hero-overlay),var(--hero-overlay)),
-      url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1950&auto=format&fit=crop');
+      linear-gradient(180deg,var(--hero-veil),var(--hero-veil)),
+      url('https://images.unsplash.com/photo-1517451330947-7809dead78d5?q=80&w=1920&auto=format&fit=crop&tvv=6');
     background-size:cover;background-position:center;
+    border-bottom:1px solid var(--line);
   }
   .hero .wrap{padding:72px 22px 40px}
-  .badge{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--line);color:var(--accent2);font-weight:800}
-  h1{font-size:50px;line-height:1.05;margin:10px 0 10px;text-shadow:0 6px 28px rgba(0,0,0,.6)}
-  p.lead{font-size:18px;color:#ecf8f8;max-width:780px}
+  .badge{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:#FFFFFF;border:1px solid var(--line);color:#7C5A00;font-weight:800}
+  h1{font-size:46px;line-height:1.06;margin:10px 0 10px;color:var(--ink)}
+  p.lead{font-size:18px;color:var(--muted);max-width:780px}
   .grid{display:grid;gap:20px}
   .cols-2{grid-template-columns:1.2fr 1fr}
   .cols-3{grid-template-columns:repeat(3,1fr)}
@@ -65,22 +74,24 @@
     border:1px solid var(--line);
     border-radius:18px;
     box-shadow: var(--shadow);
-    backdrop-filter: blur(6px);
   }
-  .card--solid{background:var(--solid)} /* even stronger contrast */
   .pad{padding:22px}
   label{font-weight:800;font-size:14px;margin-bottom:6px;display:block}
   input,select,button,textarea{
     width:100%;padding:12px 14px;border-radius:12px;
     border:1px solid var(--line);
-    background:#0b1e20;color:var(--text);font-size:15px
+    background:#FAFFFD;color:var(--ink);font-size:15px
   }
-  button{cursor:pointer;background:linear-gradient(135deg,var(--accent),#5ae9ff);color:#022; font-weight:900;letter-spacing:.3px;border:none}
-  button:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(122,241,218,.35)}
+  button{
+    cursor:pointer;
+    background:linear-gradient(135deg,var(--coral),#FFBCAE);
+    color:#442016; font-weight:900;letter-spacing:.3px;border:none
+  }
+  button:hover{transform:translateY(-1px);box-shadow:0 12px 24px rgba(255,158,138,.25)}
   button:disabled{opacity:.6;cursor:not-allowed}
-  .stat{padding:16px;border-radius:14px;background:rgba(255,255,255,.08);border:1px dashed var(--line);text-align:center}
-  .countdown{font-variant-numeric:tabular-nums;font-weight:800;color:var(--accent2)}
-  .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--line);font-size:13px}
+  .stat{padding:16px;border-radius:14px;background:#FFF8F1;border:1px dashed var(--line);text-align:center}
+  .countdown{font-variant-numeric:tabular-nums;font-weight:800;color:#AA6B00}
+  .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:#F3FFF9;border:1px solid var(--line);font-size:13px;color:var(--teal)}
   .section{margin:32px 0}
   .section h2{font-size:28px;margin:0 0 8px}
   .muted{color:var(--muted)}
@@ -88,25 +99,25 @@
   .qa{display:grid;gap:12px}
   .faq p{margin:10px 0}
   .tabs{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
-  .tab{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);cursor:pointer;font-weight:800}
-  .tab.active{background:linear-gradient(135deg,var(--accent2),#ffc56a);color:#222}
+  .tab{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#FFFFFF;cursor:pointer;font-weight:800;color:var(--ink)}
+  .tab.active{background:linear-gradient(135deg,#FFE9C2,#FFDCA0);color:#3c2a00;border-color:rgba(0,0,0,.1)}
   .panel{display:none}
   .panel.active{display:block}
-  .tile{padding:16px;border:1px solid var(--line);border-radius:14px;margin:10px 0;background:rgba(255,255,255,.06)}
+  .tile{padding:16px;border:1px solid var(--line);border-radius:14px;margin:10px 0;background:#FFFFFF}
   .opt{display:flex;gap:10px;align-items:flex-start;margin:10px 0}
   .opt input{width:auto}
-  .result{border-left:4px solid var(--accent);padding-left:14px}
-  .story-stage{padding:14px;border-left:3px solid var(--accent2); margin:14px 0;background:rgba(255,255,255,.07);border-radius:12px}
-  .kpi{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
-  .footer{opacity:.9;padding:30px 0}
+  .result{border-left:4px solid var(--leaf);padding-left:14px;background:#F6FFF9;border:1px solid var(--line);border-radius:12px}
+  .story-stage{padding:14px;border-left:3px solid var(--sun); margin:14px 0;background:#FFFDF6;border:1px solid var(--line);border-radius:12px}
+  .footer{opacity:.95;padding:30px 0}
+  /* Decorative palms */
   .bg-fronds{
-    position:absolute; inset:0; pointer-events:none; opacity:.28;
+    position:absolute; inset:0; pointer-events:none; opacity:.22;
     background:
-      url('https://images.unsplash.com/photo-1606923829579-0cb981a83e2e?q=80&w=2200&auto=format&fit=crop') top left / 700px no-repeat,
-      url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=2200&auto=format&fit=crop') bottom right / 900px no-repeat;
-    filter:saturate(1.1) hue-rotate(-10deg);
+      url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=2200&auto=format&fit=crop&tvv=6') bottom right / 880px no-repeat,
+      url('https://images.unsplash.com/photo-1606923829579-0cb981a83e2e?q=80&w=2200&auto=format&fit=crop&tvv=6') top left / 640px no-repeat;
+    mix-blend-mode:multiply;
   }
-  @media (max-width:980px){ .cols-2,.cols-3,.kpi,.split{grid-template-columns:1fr} h1{font-size:38px}}
+  @media (max-width:980px){ .cols-2,.cols-3,.split{grid-template-columns:1fr} h1{font-size:36px}}
   @media (prefers-reduced-motion: reduce){ *{scroll-behavior:auto} }
 </style>
 
@@ -149,11 +160,11 @@
   <div class="bg-fronds"></div>
   <div class="wrap">
     <span class="badge">Costa Rica • Jan 15–18, 2026 🌴</span>
-    <h1>Good vibes. Strong nervous systems. <br/>A retreat you’ll feel for months.</h1>
-    <p class="lead">Three and a half days of breathwork, cold immersion, movement, and nature—built for high-performers who want clarity, resilience, and sustainable energy.</p>
+    <h1>Sun on your face. Calm in your body. <br/>Leave lighter, come back stronger.</h1>
+    <p class="lead">Three and a half days of breathwork, ocean dips, movement, and nature—built for high-performers who want clarity, resilience, and sustainable energy.</p>
 
     <div class="grid cols-2 section">
-      <div class="card card--solid pad">
+      <div class="card pad">
         <div class="grid cols-3">
           <div class="stat"><div class="muted">Countdown</div><div id="cd" class="countdown">—</div></div>
           <div class="stat"><div class="muted">Format</div><div><strong>Small group</strong> • 16 spots</div></div>
@@ -163,7 +174,7 @@
       </div>
 
       <!-- Waitlist -->
-      <div class="card card--solid pad" id="waitlist">
+      <div class="card pad" id="waitlist">
         <h2>Get early access</h2>
         <p class="muted">Join the waitlist for early-bird pricing, first access to rooms, and a free “7-Day Nervous-System Reset.”</p>
 
@@ -202,7 +213,7 @@
         <div id="thanks" class="muted" style="display:none;margin-top:8px;">
           ✅ You’re on the list! Check your inbox for the “7-Day Nervous-System Reset.”
         </div>
-        <div id="error" style="display:none;margin-top:8px;color:#ffb3b3;">
+        <div id="error" style="display:none;margin-top:8px;color:#a64834;">
           ❌ Submission failed. Please try again.
         </div>
       </div>
@@ -273,7 +284,7 @@
 
       <div id="story">
         <div class="story-stage" data-step="1">
-          <b>Dawn in Costa Rica.</b> You wake to ocean air and birdsong. First move?
+          <b>Sunrise in Costa Rica.</b> You wake to ocean air and birdsong. First move?
           <div class="qa">
             <button class="choice" data-next="2a" data-tag="clarity" type="button">Guided breath by the beach</button>
             <button class="choice" data-next="2b" data-tag="adventure" type="button">Ocean dip / cold immersion</button>
@@ -362,14 +373,14 @@
 
   <!-- Itinerary/Who -->
   <section class="section split" id="itinerary">
-    <div class="card pad">
+    <div class="card pad" style="background:linear-gradient(180deg,#FFFFFF, #FFF8EE)">
       <h2>Sample itinerary</h2>
       <div class="tile"><b>AM</b> — Breath + mobility → ocean/ice cold immersion → nourishing breakfast</div>
       <div class="tile"><b>Midday</b> — Workshops: breathing mechanics, state control, nervous system education</div>
       <div class="tile"><b>Afternoon</b> — Nature time: surf/hike or recovery</div>
       <div class="tile"><b>Evening</b> — Deeper breath journeys, integration circles, journaling</div>
     </div>
-    <div class="card pad">
+    <div class="card pad" style="background:linear-gradient(180deg,#FFFFFF,#F3FFF9)">
       <h2>Who it’s for</h2>
       <ul>
         <li>Founders, execs, athletes & creators seeking clarity and recovery</li>
@@ -381,7 +392,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="section card pad faq" id="faq">
+  <section class="section card pad faq" id="faq" style="background:linear-gradient(180deg,#FFFFFF,#F8FFFB)">
     <h2>FAQ</h2>
     <p><b>Is this suitable for beginners?</b> Yes. You’ll get progressions for every drill.</p>
     <p><b>Do I need to be comfortable with cold?</b> No. We progress gradually with breath-led protocols.</p>
@@ -392,6 +403,11 @@
 <footer class="wrap footer">
   <div class="muted">© Tenable Vibrations. Pre-launch preview. <a href="https://www.tenablevibrations.com" target="_blank" rel="noopener">Main site</a></div>
 </footer>
+
+<!-- version chip -->
+<div style="position:fixed;right:10px;bottom:10px;background:#FFFFFF;color:#25625D;border:1px solid var(--line);border-radius:10px;padding:6px 10px;font:700 12px/1.2 system-ui;z-index:9999;opacity:.95;box-shadow:0 8px 18px rgba(0,0,0,.06)">
+  TV Build v-CR-006
+</div>
 
 <script>
 /* Helpers */
@@ -465,6 +481,7 @@ document.querySelectorAll('.tab').forEach(tab=>{
         if(!res.ok) throw new Error('Bad response');
       }catch(ex){
         console.warn('Live submit failed:', ex);
+        err.style.display='block';
       }
     }
     form.reset();
@@ -474,7 +491,7 @@ document.querySelectorAll('.tab').forEach(tab=>{
   });
 })();
 
-/* ===== Archetype Quiz (improved UX) ===== */
+/* ===== Archetype Quiz ===== */
 (function(){
   const form = document.getElementById('archetypeForm');
   const out = document.getElementById('archResult');
@@ -526,13 +543,13 @@ document.querySelectorAll('.tab').forEach(tab=>{
 
   form.addEventListener('submit', (e)=>{
     e.preventDefault();
-    btn.disabled = true;
+    if(btn) btn.disabled = true;
 
     // Validate all questions answered
     const requiredQs = ['q1','q2','q3','q4'];
     for(const q of requiredQs){
       if(!new FormData(form).get(q)){
-        alert('Please answer all questions.'); btn.disabled=false; return;
+        alert('Please answer all questions.'); if(btn) btn.disabled=false; return;
       }
     }
 
@@ -548,7 +565,7 @@ document.querySelectorAll('.tab').forEach(tab=>{
     out.style.display='block';
     out.innerHTML = `
       <div class="result" id="archAnchor">
-        <h4>Your Archetype: <span class="accent">${a.title}</span></h4>
+        <h4>Your Archetype: <span style="color:${archetype==='balanced'?'#1F6E68':(archetype==='grinder'?'#F67F5A':'#7BCB9B')}">${a.title}</span></h4>
         <p class="muted">${a.blurb}</p>
         <p><b>Today’s drill:</b> ${a.drill}</p>
         <div class="tile">
@@ -565,7 +582,7 @@ document.querySelectorAll('.tab').forEach(tab=>{
       </div>
     `;
     smoothScrollTo(document.getElementById('archAnchor'));
-    btn.disabled = false;
+    if(btn) btn.disabled = false;
 
     // download handler
     setTimeout(()=>{
@@ -634,7 +651,7 @@ Join the waitlist for early-bird access.`;
       out.style.display='block';
       out.innerHTML = `
         <div class="result" id="storyAnchor">
-          <h4>Your persona: <span class="accent">${p.title}</span></h4>
+          <h4>Your persona: <span style="color:#1F6E68">${p.title}</span></h4>
           <p class="muted">Here’s a mini-itinerary that matches how you like to move.</p>
           <div class="tile">
             <b>Custom Day Plan</b>
@@ -686,22 +703,21 @@ Join the waitlist for early-bird access.`;
     btn.disabled = true;
 
     const fd = new FormData(form);
-    // ensure all answered
     for(const k of ['r1','r2','r3','r4','r5']){ if(!fd.get(k)){ alert('Please answer all questions.'); btn.disabled=false; return; } }
 
     let score = 50; // baseline
     ['r1','r2','r3','r4','r5'].forEach(k=> score += parseInt(fd.get(k)||'0',10));
-    let tier = 'Beginner', color = 'var(--rose)', plan = [
+    let tier = 'Beginner', color = '#FF9E8A', plan = [
       'Coherent breathing 5/5 for 6–8 min daily',
       '3× long-exhale resets before meetings',
       'Low-light downshift 5 min before sleep'
     ];
-    if(score>=60 && score<75){ tier='Intermediate'; color='var(--accent2)'; plan=[
+    if(score>=60 && score<75){ tier='Intermediate'; color='#FFC876'; plan=[
       'Cadence walk 4/6 for 12 min',
       'CO₂ tolerance test 2×/week',
       'Evening 6–8s exhale breathing 8–10 min'
     ];}
-    if(score>=75){ tier='Advanced'; color='var(--accent)'; plan=[
+    if(score>=75){ tier='Advanced'; color='#1F6E68'; plan=[
       'Coherent 5/5 (10–12 min) + nasal training',
       'Pre-stress protocol: 3 long exhales + focus cue',
       'Cold progression 2–3×/week with controlled breathing'

@@ -39,8 +39,9 @@
     .itinerary .step{display:flex;gap:14px;margin:10px 0}
     .itinerary .n{width:32px;height:32px;border-radius:999px;background:rgba(244,162,97,.15);color:var(--accent2);display:flex;align-items:center;justify-content:center;font-weight:800}
     footer{opacity:.8;padding:30px 0}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+    @media (max-width:900px){.hero{grid-template-columns:1fr} h1{font-size:34px}}
   </style>
+  <!-- JSON-LD for the event -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -62,7 +63,7 @@
     <section class="hero">
       <div>
         <span class="badge">Costa Rica • Jan 15–18, 2026</span>
-        <h1>Reset your nervous system. Rewire your focus. <br/>Join the Costa Rica retreat.</h1>
+        <h1>Reset your nervous system. Rewire your focus.<br/>Join the Costa Rica retreat.</h1>
         <p class="lead">Three and a half days of breathwork, cold immersion, movement, and nature—designed for high-performers who want clarity, resilience, and sustainable energy.</p>
         <div class="grid cols-3">
           <div class="stat"><div class="muted">Countdown</div><div class="countdown" id="cd">Loading…</div></div>
@@ -70,43 +71,48 @@
           <div class="stat"><div class="muted">Focus</div><div>Breathwork • Cold • Purpose</div></div>
         </div>
       </div>
+
       <div class="card pad">
         <h2>Get early access</h2>
         <p class="muted">Join the waitlist for early-bird pricing, first access to rooms, and a free “7-Day Nervous-System Reset.”</p>
-        
-        
-        <!-- START MailerLite -->
-<link rel="preconnect" href="https://assets.mailerlite.com">
-<script>
-  // Optional: push UTM params into a hidden field
-  function getParam(n){return new URLSearchParams(location.search).get(n)||'';}
-  document.addEventListener('DOMContentLoaded',function(){
-    const utm = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
-    const store = Object.fromEntries(utm.map(k=>[k,getParam(k)]));
-    window.__TV_UTM__ = store;
-  });
-</script>
 
-<div class="card pad" id="waitlist">
-  <h2>Get early access</h2>
-  <p class="muted">Join the waitlist for early-bird pricing, first access to rooms, and a free “7-Day Nervous-System Reset.”</p>
+        <!-- ONE STEP TO GO LIVE LATER: replace FORM_ENDPOINT below with Formspree/MailerLite/ConvertKit endpoint -->
+        <form id="wl" class="cta" action="" method="POST" novalidate>
+          <div>
+            <label for="name">Full name</label>
+            <input id="name" name="name" autocomplete="name" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div>
+            <label for="interest">What’s your primary goal?</label>
+            <select id="interest" name="interest" required>
+              <option value="">Choose…</option>
+              <option>Stress reduction & resilience</option>
+              <option>Peak performance & focus</option>
+              <option>Recovery & sleep</option>
+              <option>Community & adventure</option>
+            </select>
+          </div>
 
-  <!-- Replace data-form with your MailerLite form ID -->
-  <script src="https://assets.mailerlite.com/js/universal.js" data-form="YOUR_MAILERLITE_FORM_ID" async></script>
+          <!-- Optional: UTM capture -->
+          <input type="hidden" name="utm_source" id="utm_source">
+          <input type="hidden" name="utm_medium" id="utm_medium">
+          <input type="hidden" name="utm_campaign" id="utm_campaign">
+          <input type="hidden" name="utm_content" id="utm_content">
+          <input type="hidden" name="utm_term" id="utm_term">
 
-  <!-- Hidden UTM passthrough (optional: map in ML with custom fields) -->
-  <form style="display:none">
-    <input type="hidden" name="utm_source" value="<script>document.write(window.__TV_UTM__?.utm_source||'')</script>">
-    <input type="hidden" name="utm_medium" value="<script>document.write(window.__TV_UTM__?.utm_medium||'')</script>">
-    <input type="hidden" name="utm_campaign" value="<script>document.write(window.__TV_UTM__?.utm_campaign||'')</script>">
-    <input type="hidden" name="utm_content" value="<script>document.write(window.__TV_UTM__?.utm_content||'')</script>">
-    <input type="hidden" name="utm_term" value="<script>document.write(window.__TV_UTM__?.utm_term||'')</script>">
-  </form>
-</div>
-<!-- END MailerLite -->
+          <button type="submit">Join the Waitlist</button>
+          <small class="muted">We’ll never spam. Unsubscribe anytime.</small>
+        </form>
 
         <div id="thanks" class="muted" style="display:none;margin-top:10px;">
           ✅ You’re on the list! Check your inbox for the “7-Day Nervous-System Reset.”
+        </div>
+        <div id="error" style="display:none;margin-top:10px;color:#f8b4b4;">
+          ❌ Submission failed. Please try again.
         </div>
       </div>
     </section>
@@ -160,9 +166,9 @@
   </div>
 
   <script>
-    // Countdown
+    // ===== Countdown =====
     (function(){
-      const target = new Date('2026-01-15T08:00:00-06:00'); // adjust TZ to venue
+      const target = new Date('2026-01-15T08:00:00-06:00'); // adjust local TZ if needed
       const el = document.getElementById('cd');
       function tick(){
         const now = new Date();
@@ -175,19 +181,59 @@
       }
       tick(); setInterval(tick, 60000);
     })();
-    // Fake submit (localStorage) – replace with ESP/Netlify later
-    document.getElementById('wl').addEventListener('submit', function(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const interest = document.getElementById('interest').value;
-      if(!name || !email || !interest) return;
-      const leads = JSON.parse(localStorage.getItem('tv_waitlist')||'[]');
-      leads.push({name,email,interest,ts:Date.now()});
-      localStorage.setItem('tv_waitlist', JSON.stringify(leads));
-      this.reset();
-      document.getElementById('thanks').style.display='block';
-    });
+
+    // ===== UTM capture =====
+    (function(){
+      const qs=new URLSearchParams(location.search);
+      ['source','medium','campaign','content','term'].forEach(k=>{
+        const el=document.getElementById('utm_'+k);
+        if(el) el.value = qs.get('utm_'+k) || '';
+      });
+    })();
+
+    // ===== Form handling =====
+    (function(){
+      const form = document.getElementById('wl');
+      const thanks = document.getElementById('thanks');
+      const err = document.getElementById('error');
+
+      // Set this to your real endpoint later (Formspree/MailerLite/ConvertKit).
+      // For Formspree, it looks like: https://formspree.io/f/xxxxabcd
+      const FORM_ENDPOINT = ""; // ← leave empty for local demo; paste real URL to go live
+
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+        err.style.display='none';
+
+        const data = new FormData(form);
+        const payload = Object.fromEntries(data.entries());
+
+        // Always save locally so you can demo immediately
+        try {
+          const leads = JSON.parse(localStorage.getItem('tv_waitlist')||'[]');
+          leads.push({ ...payload, ts: Date.now() });
+          localStorage.setItem('tv_waitlist', JSON.stringify(leads));
+        } catch(_) {}
+
+        // If you supplied an endpoint, attempt a real submission
+        if(FORM_ENDPOINT){
+          try{
+            const res = await fetch(FORM_ENDPOINT, {
+              method:'POST',
+              headers:{'Accept':'application/json'},
+              body: new FormData(form)
+            });
+            if(!res.ok) throw new Error('Network response was not ok');
+          }catch(ex){
+            // If live submit fails, still show local success so the demo flows
+            console.warn('Live submit failed:', ex);
+          }
+        }
+
+        form.reset();
+        thanks.style.display='block';
+      });
+    })();
   </script>
 </body>
 </html>

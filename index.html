@@ -1,83 +1,153 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tenable Vibrations – Costa Rica Retreat Waitlist (Jan 15–18, 2026)</title>
-  <meta name="description" content="Join the waitlist for Tenable Vibrations’ 3–4 day breathwork, cold immersion, and purpose-reset retreat in Costa Rica. Limited spots. Early-bird access." />
-  <meta property="og:title" content="Costa Rica Retreat Waitlist — Tenable Vibrations" />
-  <meta property="og:description" content="Breathwork • Cold • Nature • Purpose. Join the waitlist for early access and pricing." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600" />
-  <meta name="theme-color" content="#0d1b2a" />
-  <style>
-    :root{
-      --bg:#0b1321;--card:#0f1f38;--muted:#97a3b6;--text:#f5f7fb;--accent:#7ee0d4;--accent2:#f4a261;
-    }
-    *{box-sizing:border-box} html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b1321,#0b1321 40%,#0a182e);color:var(--text)}
-    a{color:var(--accent);text-decoration:none}
-    .wrap{max-width:1080px;margin:0 auto;padding:24px}
-    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;padding:32px 0}
-    .card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,.07);border-radius:18px;box-shadow:0 6px 24px rgba(0,0,0,.25)}
-    .pad{padding:24px}
-    h1{font-size:42px;line-height:1.1;margin:0 0 10px}
-    h2{font-size:28px;margin:16px 0 6px}
-    p.lead{font-size:18px;color:#dfe6f3}
-    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(126,224,212,.12);border:1px solid rgba(126,224,212,.4);color:var(--accent);font-weight:600;font-size:13px;letter-spacing:.3px}
-    .cta{display:flex;flex-direction:column;gap:12px}
-    label{font-weight:600;font-size:14px;margin-bottom:6px;display:block}
-    input,select,button,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0b1a31;color:var(--text);font-size:15px}
-    button{cursor:pointer;background:linear-gradient(135deg,var(--accent),#58d2f1);color:#0b1321;font-weight:800;letter-spacing:.3px;border:none}
-    button:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(126,224,212,.35)}
-    .grid{display:grid;gap:18px}
-    .cols-3{grid-template-columns:repeat(3,1fr)}
-    .cols-2{grid-template-columns:repeat(2,1fr)}
-    .stat{padding:18px;border-radius:14px;background:rgba(255,255,255,.03);border:1px dashed rgba(255,255,255,.12);text-align:center}
-    .muted{color:var(--muted)}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:13px}
-    .countdown{font-variant-numeric:tabular-nums;font-size:22px;font-weight:700;color:var(--accent2)}
-    .itinerary .step{display:flex;gap:14px;margin:10px 0}
-    .itinerary .n{width:32px;height:32px;border-radius:999px;background:rgba(244,162,97,.15);color:var(--accent2);display:flex;align-items:center;justify-content:center;font-weight:800}
-    footer{opacity:.8;padding:30px 0}
-    @media (max-width:900px){.hero{grid-template-columns:1fr} h1{font-size:34px}}
-  </style>
-  <!-- JSON-LD for the event -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Event",
-    "name":"Tenable Vibrations Costa Rica Retreat",
-    "startDate":"2026-01-15",
-    "endDate":"2026-01-18",
-    "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
-    "eventStatus":"https://schema.org/EventScheduled",
-    "location":{"@type":"Place","name":"Costa Rica"},
-    "image":["https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600"],
-    "description":"A 3–4 day breathwork, cold immersion, and purpose-reset immersion.",
-    "organizer":{"@type":"Organization","name":"Tenable Vibrations","url":"https://www.tenablevibrations.com"}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Tenable Vibrations — Costa Rica Retreat • Jan 15–18, 2026</title>
+<meta name="description" content="Breathwork • Cold • Nature • Purpose. Join the waitlist and try our interactive tools to get your personalized path." />
+<meta property="og:title" content="Tenable Vibrations — Costa Rica Retreat" />
+<meta property="og:description" content="Reset your nervous system in Costa Rica. Get your personalized plan now." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1600&auto=format&fit=crop" />
+<meta name="theme-color" content="#0f5f5f" />
+<link rel="preconnect" href="https://images.unsplash.com">
+
+<style>
+  /* ====== Tropical Theme ====== */
+  :root{
+    --bg:#052b2b;         /* deep teal */
+    --bg2:#0a3f3f;
+    --card:#0f2f2f;       /* dark card */
+    --glass:rgba(255,255,255,.06);
+    --line:rgba(255,255,255,.14);
+    --text:#f6fbff;
+    --muted:#bfe2e2;
+    --accent:#7ef7d6;     /* aqua */
+    --accent2:#ffd07a;    /* sun */
+    --rose:#ff9aa2;
   }
-  </script>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg)}
+  a{color:var(--accent);text-decoration:none}
+  .wrap{max-width:1160px;margin:0 auto;padding:22px}
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.15));backdrop-filter:blur(8px)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#5ae9ff);box-shadow:0 0 0 3px rgba(126,247,214,.2)}
+  .brand b{letter-spacing:.3px}
+  .links a{margin-left:14px;font-weight:600;opacity:.9}
+  .hero{
+    position:relative; isolation:isolate;
+    background:
+      linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.65)),
+      url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1950&auto=format&fit=crop');
+    background-size:cover;background-position:center;
+  }
+  .hero .wrap{padding:64px 22px 36px}
+  .badge{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid var(--line);color:var(--accent2);font-weight:700}
+  h1{font-size:50px;line-height:1.05;margin:10px 0 10px;text-shadow:0 6px 28px rgba(0,0,0,.35)}
+  p.lead{font-size:18px;color:#eaf7f7;max-width:720px}
+  .grid{display:grid;gap:20px}
+  .cols-2{grid-template-columns:1.2fr 1fr}
+  .cols-3{grid-template-columns:repeat(3,1fr)}
+  .card{background:var(--glass);border:1px solid var(--line);border-radius:20px;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+  .pad{padding:22px}
+  label{font-weight:700;font-size:14px;margin-bottom:6px;display:block}
+  input,select,button,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:rgba(5,25,25,.6);color:var(--text);font-size:15px}
+  button{cursor:pointer;background:linear-gradient(135deg,var(--accent),#5ae9ff);color:#022; font-weight:900;letter-spacing:.3px;border:none}
+  button:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(122,241,218,.35)}
+  .stat{padding:16px;border-radius:14px;background:rgba(255,255,255,.08);border:1px dashed var(--line);text-align:center}
+  .countdown{font-variant-numeric:tabular-nums;font-weight:800;color:var(--accent2)}
+  .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--line);font-size:13px}
+  .section{margin:28px 0}
+  .section h2{font-size:28px;margin:0 0 8px}
+  .muted{color:var(--muted)}
+  .accent{color:var(--accent)}
+  .split{display:grid;gap:18px;grid-template-columns:1fr 1fr}
+  .qa{display:grid;gap:12px}
+  .qa .q{font-weight:700}
+  .faq p{margin:10px 0}
+  .tabs{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+  .tab{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);cursor:pointer;font-weight:700}
+  .tab.active{background:linear-gradient(135deg,var(--accent2),#ffc56a);color:#222}
+  .panel{display:none}
+  .panel.active{display:block}
+  .tile{padding:16px;border:1px solid var(--line);border-radius:14px;margin:10px 0;background:rgba(255,255,255,.05)}
+  .opt{display:flex;gap:10px;align-items:flex-start;margin:10px 0}
+  .opt input{width:auto}
+  .result{border-left:4px solid var(--accent);padding-left:14px}
+  .story-stage{padding:14px;border-left:3px solid var(--accent2); margin:14px 0;background:rgba(255,255,255,.06);border-radius:12px}
+  .kpi{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
+  .footer{opacity:.85;padding:30px 0}
+  .bg-fronds{
+    position:absolute; inset:0; pointer-events:none; opacity:.3; 
+    background:
+      url('https://images.unsplash.com/photo-1606923829579-0cb981a83e2e?q=80&w=2200&auto=format&fit=crop') top left / 700px no-repeat,
+      url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=2200&auto=format&fit=crop') bottom right / 900px no-repeat;
+    filter:saturate(1.1) hue-rotate(-10deg);
+  }
+  @media (max-width:980px){ .cols-2,.cols-3,.kpi,.split{grid-template-columns:1fr} h1{font-size:38px}}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Event",
+  "name":"Tenable Vibrations Costa Rica Retreat",
+  "startDate":"2026-01-15",
+  "endDate":"2026-01-18",
+  "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus":"https://schema.org/EventScheduled",
+  "location":{"@type":"Place","name":"Costa Rica"},
+  "image":["https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1600&auto=format&fit=crop"],
+  "description":"A 3–4 day breathwork, cold immersion, and purpose-reset immersion.",
+  "organizer":{"@type":"Organization","name":"Tenable Vibrations","url":"https://www.tenablevibrations.com"}
+}
+</script>
 </head>
 <body>
+
+<!-- ===== Nav ===== -->
+<div class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand">
+      <div class="logo"></div>
+      <b>Tenable Vibrations</b>
+    </div>
+    <div class="links">
+      <a href="#waitlist">Waitlist</a>
+      <a href="#interactives">Personalize</a>
+      <a href="#itinerary">Itinerary</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Hero ===== -->
+<header class="hero">
+  <div class="bg-fronds"></div>
   <div class="wrap">
-    <section class="hero">
-      <div>
-        <span class="badge">Costa Rica • Jan 15–18, 2026</span>
-        <h1>Reset your nervous system. Rewire your focus.<br/>Join the Costa Rica retreat.</h1>
-        <p class="lead">Three and a half days of breathwork, cold immersion, movement, and nature—designed for high-performers who want clarity, resilience, and sustainable energy.</p>
+    <span class="badge">Costa Rica • Jan 15–18, 2026 🌴</span>
+    <h1>Good vibes. Strong nervous systems. <br/>A retreat you’ll feel for months.</h1>
+    <p class="lead">Three and a half days of breathwork, cold immersion, movement, and nature—built for high-performers who want clarity, resilience, and sustainable energy.</p>
+
+    <div class="grid cols-2 section">
+      <div class="card pad">
         <div class="grid cols-3">
-          <div class="stat"><div class="muted">Countdown</div><div class="countdown" id="cd">Loading…</div></div>
+          <div class="stat"><div class="muted">Countdown</div><div id="cd" class="countdown">—</div></div>
           <div class="stat"><div class="muted">Format</div><div><strong>Small group</strong> • 16 spots</div></div>
           <div class="stat"><div class="muted">Focus</div><div>Breathwork • Cold • Purpose</div></div>
         </div>
+        <div style="margin-top:12px" class="pill">Early-bird opens to waitlist first</div>
       </div>
 
-      <div class="card pad">
+      <!-- Waitlist -->
+      <div class="card pad" id="waitlist">
         <h2>Get early access</h2>
         <p class="muted">Join the waitlist for early-bird pricing, first access to rooms, and a free “7-Day Nervous-System Reset.”</p>
 
-        <!-- ONE STEP TO GO LIVE LATER: replace FORM_ENDPOINT below with Formspree/MailerLite/ConvertKit endpoint -->
-        <form id="wl" class="cta" action="" method="POST" novalidate>
+        <!-- Make live later by adding a real endpoint below -->
+        <form id="wl" class="qa" action="" method="POST" novalidate>
           <div>
             <label for="name">Full name</label>
             <input id="name" name="name" autocomplete="name" required />
@@ -87,7 +157,7 @@
             <input id="email" name="email" type="email" autocomplete="email" required />
           </div>
           <div>
-            <label for="interest">What’s your primary goal?</label>
+            <label for="interest">Primary goal</label>
             <select id="interest" name="interest" required>
               <option value="">Choose…</option>
               <option>Stress reduction & resilience</option>
@@ -97,7 +167,7 @@
             </select>
           </div>
 
-          <!-- Optional: UTM capture -->
+          <!-- optional UTM capture -->
           <input type="hidden" name="utm_source" id="utm_source">
           <input type="hidden" name="utm_medium" id="utm_medium">
           <input type="hidden" name="utm_campaign" id="utm_campaign">
@@ -108,132 +178,447 @@
           <small class="muted">We’ll never spam. Unsubscribe anytime.</small>
         </form>
 
-        <div id="thanks" class="muted" style="display:none;margin-top:10px;">
+        <div id="thanks" class="muted" style="display:none;margin-top:8px;">
           ✅ You’re on the list! Check your inbox for the “7-Day Nervous-System Reset.”
         </div>
-        <div id="error" style="display:none;margin-top:10px;color:#f8b4b4;">
+        <div id="error" style="display:none;margin-top:8px;color:#ffb3b3;">
           ❌ Submission failed. Please try again.
         </div>
       </div>
-    </section>
-
-    <section class="card pad">
-      <div class="grid cols-3">
-        <div>
-          <h3>Physiology first</h3>
-          <p>Targeted protocols from Oxygen Advantage & conscious connected breathwork to improve CO₂ tolerance, HRV, and recovery.</p>
-        </div>
-        <div>
-          <h3>Cold + movement</h3>
-          <p>Progressive cold exposure and mobility to train state shifts on demand and expand stress capacity.</p>
-        </div>
-        <div>
-          <h3>Purpose reset</h3>
-          <p>Guided intention, values work, and honest reflection in community—leave with a plan you’ll actually use.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="grid cols-2" style="margin-top:24px;">
-      <div class="card pad itinerary">
-        <h2>Sample itinerary</h2>
-        <div class="step"><div class="n">1</div><div><strong>AM breath + mobility</strong> → lake/sea cold immersion → nourishing breakfast.</div></div>
-        <div class="step"><div class="n">2</div><div><strong>Workshops</strong>: breathing mechanics, state control, nervous system education.</div></div>
-        <div class="step"><div class="n">3</div><div><strong>Adventure</strong>: nature time, optional surf/hike, or recovery.</div></div>
-        <div class="step"><div class="n">4</div><div><strong>Evening journeys</strong>: deeper breath sessions, integration circles, journaling.</div></div>
-      </div>
-      <div class="card pad">
-        <h2>Who it’s for</h2>
-        <ul>
-          <li>Founders, execs, athletes & creators seeking clarity and recovery.</li>
-          <li>Humans ready to regulate stress and sleep better—without woo or fluff.</li>
-          <li>Small-group community in a breathtaking setting.</li>
-        </ul>
-        <div style="margin-top:12px" class="pill">Limited to 16 spots • Early-bird opens to waitlist first</div>
-      </div>
-    </section>
-
-    <section class="card pad" style="margin-top:24px;">
-      <h2>FAQ</h2>
-      <p><strong>Is this suitable for beginners?</strong> Yes. All sessions are coached with opt-in intensity and safety briefings.</p>
-      <p><strong>Do I need to be comfortable with cold?</strong> No. We progress gradually with breath-led protocols.</p>
-      <p><strong>What’s included?</strong> Coaching, programming, sessions, and community activities. Lodging/travel specifics released to waitlist first.</p>
-    </section>
-
-    <footer class="wrap">
-      <div class="muted">© Tenable Vibrations. This page is a pre-launch preview. <a href="https://www.tenablevibrations.com" target="_blank" rel="noopener">Main site</a>.</div>
-    </footer>
+    </div>
   </div>
+</header>
 
-  <script>
-    // ===== Countdown =====
-    (function(){
-      const target = new Date('2026-01-15T08:00:00-06:00'); // adjust local TZ if needed
-      const el = document.getElementById('cd');
-      function tick(){
-        const now = new Date();
-        const diff = target - now;
-        if(diff<=0){el.textContent='It’s retreat time!';return;}
-        const d = Math.floor(diff/86400000);
-        const h = Math.floor((diff%86400000)/3600000);
-        const m = Math.floor((diff%3600000)/60000);
-        el.textContent = `${d}d ${h}h ${m}m`;
+<!-- ===== Interactive Experiences ===== -->
+<main class="wrap" id="interactives">
+  <section class="section">
+    <h2>Find your personalized path 🌺</h2>
+    <p class="muted">Pick an interactive below. Each gives you tailored drills and a mini-plan you can download.</p>
+
+    <div class="tabs" id="tabs">
+      <div class="tab active" data-panel="archetype">Nervous System Archetype</div>
+      <div class="tab" data-panel="choose">Choose-Your-Own Retreat</div>
+      <div class="tab" data-panel="readiness">Breathwork Readiness Score</div>
+    </div>
+
+    <!-- Panel 1: Archetype Quiz -->
+    <div class="panel active card pad" id="panel-archetype">
+      <h3>Archetype Quiz (2–3 min)</h3>
+      <p class="muted">Answer a few quick questions to reveal your profile and get a targeted drill.</p>
+
+      <form id="archetypeForm">
+        <div class="tile">
+          <div class="q">1) When stress spikes, what happens first?</div>
+          <label class="opt"><input type="radio" name="q1" value="overthinker" required> Mind races; hard to slow thoughts</label>
+          <label class="opt"><input type="radio" name="q1" value="grinder"> Power through; body feels wired</label>
+          <label class="opt"><input type="radio" name="q1" value="zen-surface"> Look calm outside; tight inside</label>
+          <label class="opt"><input type="radio" name="q1" value="balanced"> I notice & regulate fairly well</label>
+        </div>
+
+        <div class="tile">
+          <div class="q">2) Mid-afternoon energy feels…</div>
+          <label class="opt"><input type="radio" name="q2" value="overthinker" required> Mentally fried</label>
+          <label class="opt"><input type="radio" name="q2" value="grinder"> Jittery but pushing</label>
+          <label class="opt"><input type="radio" name="q2" value="zen-surface"> Flat but pretending fine</label>
+          <label class="opt"><input type="radio" name="q2" value="balanced"> Pretty steady</label>
+        </div>
+
+        <div class="tile">
+          <div class="q">3) Sleep pattern most nights?</div>
+          <label class="opt"><input type="radio" name="q3" value="overthinker" required> Hard to fall asleep</label>
+          <label class="opt"><input type="radio" name="q3" value="grinder"> Crash fast, wake wired</label>
+          <label class="opt"><input type="radio" name="q3" value="zen-surface"> Light/uneven, body feels tense</label>
+          <label class="opt"><input type="radio" name="q3" value="balanced"> Sleep fine</label>
+        </div>
+
+        <div class="tile">
+          <div class="q">4) Training preference today?</div>
+          <label class="opt"><input type="radio" name="q4" value="overthinker" required> Downshift the mind</label>
+          <label class="opt"><input type="radio" name="q4" value="grinder"> Channel intensity</label>
+          <label class="opt"><input type="radio" name="q4" value="zen-surface"> Release hidden tension</label>
+          <label class="opt"><input type="radio" name="q4" value="balanced"> Performance tune-up</label>
+        </div>
+
+        <button type="submit">See my archetype</button>
+      </form>
+
+      <div id="archResult" style="display:none;margin-top:16px"></div>
+    </div>
+
+    <!-- Panel 2: Choose-Your-Own Adventure -->
+    <div class="panel card pad" id="panel-choose">
+      <h3>Choose-Your-Own Retreat Adventure (2 min)</h3>
+      <p class="muted">Walk through Day 1 scenes. Your choices reveal your retreat persona and a custom mini-itinerary.</p>
+
+      <div id="story">
+        <div class="story-stage" data-step="1">
+          <b>Dawn in Costa Rica.</b> You wake to ocean air and birdsong. First move?
+          <div class="qa">
+            <button class="choice" data-next="2a" data-tag="clarity">Guided breath by the beach</button>
+            <button class="choice" data-next="2b" data-tag="adventure">Ocean dip / cold immersion</button>
+            <button class="choice" data-next="2c" data-tag="integration">Journal under a palm</button>
+          </div>
+        </div>
+
+        <div class="story-stage" data-step="2a" style="display:none">
+          <b>Beach breath.</b> Slow nasal breathing settles your system. What now?
+          <div class="qa">
+            <button class="choice" data-next="3a" data-tag="clarity">CO₂ tolerance test</button>
+            <button class="choice" data-next="3b" data-tag="community">Invite two others to join</button>
+          </div>
+        </div>
+
+        <div class="story-stage" data-step="2b" style="display:none">
+          <b>Cold immersion.</b> You enter calmly, exhale slow. Next?
+          <div class="qa">
+            <button class="choice" data-next="3c" data-tag="performance">Mobility flow</button>
+            <button class="choice" data-next="3d" data-tag="adventure">Beach run</button>
+          </div>
+        </div>
+
+        <div class="story-stage" data-step="2c" style="display:none">
+          <b>Journaling.</b> You write one intention. Next?
+          <div class="qa">
+            <button class="choice" data-next="3e" data-tag="integration">Integration circle</button>
+            <button class="choice" data-next="3f" data-tag="clarity">Guided breath journey</button>
+          </div>
+        </div>
+
+        <!-- End nodes -->
+        <div class="story-stage" data-step="3a" style="display:none"><b>Nice.</b> Your awareness grows. <button class="endstory">Finish</button></div>
+        <div class="story-stage" data-step="3b" style="display:none"><b>Leadership.</b> You bring others along. <button class="endstory">Finish</button></div>
+        <div class="story-stage" data-step="3c" style="display:none"><b>Strong choice.</b> You balance stress with mobility. <button class="endstory">Finish</button></div>
+        <div class="story-stage" data-step="3d" style="display:none"><b>Power on.</b> You crave challenge. <button class="endstory">Finish</button></div>
+        <div class="story-stage" data-step="3e" style="display:none"><b>Community.</b> You heal in circles. <button class="endstory">Finish</button></div>
+        <div class="story-stage" data-step="3f" style="display:none"><b>Depth work.</b> Ready for inner shifts. <button class="endstory">Finish</button></div>
+      </div>
+
+      <div id="storyResult" style="display:none;margin-top:16px"></div>
+    </div>
+
+    <!-- Panel 3: Readiness Score -->
+    <div class="panel card pad" id="panel-readiness">
+      <h3>Breathwork Readiness Score (1–2 min)</h3>
+      <p class="muted">A quick diagnostic to estimate your regulation baseline. Get a score + 7-day progression.</p>
+
+      <form id="readyForm">
+        <div class="tile">
+          <div class="q">1) How many deep sighs or mouth breaths before noon?</div>
+          <label class="opt"><input type="radio" name="r1" value="0" required> 0–1</label>
+          <label class="opt"><input type="radio" name="r1" value="-5"> 2–4</label>
+          <label class="opt"><input type="radio" name="r1" value="-10"> 5+</label>
+        </div>
+        <div class="tile">
+          <div class="q">2) Screen time yesterday?</div>
+          <label class="opt"><input type="radio" name="r2" value="5" required> ≤3h</label>
+          <label class="opt"><input type="radio" name="r2" value="0"> 3–6h</label>
+          <label class="opt"><input type="radio" name="r2" value="-5"> 6h+</label>
+        </div>
+        <div class="tile">
+          <div class="q">3) Comfortable breath-hold (after normal exhale)?</div>
+          <label class="opt"><input type="radio" name="r3" value="-5" required> <15s</label>
+          <label class="opt"><input type="radio" name="r3" value="0"> 15–25s</label>
+          <label class="opt"><input type="radio" name="r3" value="5"> >25s</label>
+        </div>
+        <div class="tile">
+          <div class="q">4) Sleep quality last 3 nights?</div>
+          <label class="opt"><input type="radio" name="r4" value="-5" required> Poor</label>
+          <label class="opt"><input type="radio" name="r4" value="0"> Mixed</label>
+          <label class="opt"><input type="radio" name="r4" value="5"> Good</label>
+        </div>
+        <div class="tile">
+          <div class="q">5) Current stress (feel truthfully)?</div>
+          <label class="opt"><input type="radio" name="r5" value="-10" required> High</label>
+          <label class="opt"><input type="radio" name="r5" value="-5"> Medium</label>
+          <label class="opt"><input type="radio" name="r5" value="0"> Low</label>
+        </div>
+        <button type="submit">Get my score</button>
+      </form>
+
+      <div id="readyResult" style="display:none;margin-top:16px"></div>
+    </div>
+  </section>
+
+  <!-- Itinerary/Who -->
+  <section class="section split" id="itinerary">
+    <div class="card pad">
+      <h2>Sample itinerary</h2>
+      <div class="tile"><b>AM</b> — Breath + mobility → ocean/ice cold immersion → nourishing breakfast</div>
+      <div class="tile"><b>Midday</b> — Workshops: breathing mechanics, state control, nervous system education</div>
+      <div class="tile"><b>Afternoon</b> — Nature time: surf/hike or recovery</div>
+      <div class="tile"><b>Evening</b> — Deeper breath journeys, integration circles, journaling</div>
+    </div>
+    <div class="card pad">
+      <h2>Who it’s for</h2>
+      <ul>
+        <li>Founders, execs, athletes & creators seeking clarity and recovery</li>
+        <li>Beginners welcome; opt-in intensity and safety briefings</li>
+        <li>Small-group community in a breathtaking setting</li>
+      </ul>
+      <div class="pill" style="margin-top:10px;">Limited to 16 spots • Early-bird opens to waitlist first</div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section card pad faq" id="faq">
+    <h2>FAQ</h2>
+    <p><b>Is this suitable for beginners?</b> Yes. You’ll get progressions for every drill.</p>
+    <p><b>Do I need to be comfortable with cold?</b> No. We progress gradually with breath-led protocols.</p>
+    <p><b>What’s included?</b> Coaching, programming, sessions, and community activities. Lodging/travel specifics go to the waitlist first.</p>
+  </section>
+</main>
+
+<footer class="wrap footer">
+  <div class="muted">© Tenable Vibrations. Pre-launch preview. <a href="https://www.tenablevibrations.com" target="_blank" rel="noopener">Main site</a></div>
+</footer>
+
+<script>
+/* ===== Countdown ===== */
+(function(){
+  const target = new Date('2026-01-15T08:00:00-06:00'); // adjust TZ if needed
+  const el = document.getElementById('cd');
+  function tick(){
+    const now = new Date();
+    const diff = target - now;
+    if(diff<=0){el.textContent='It’s retreat time!';return;}
+    const d = Math.floor(diff/86400000);
+    const h = Math.floor((diff%86400000)/3600000);
+    const m = Math.floor((diff%3600000)/60000);
+    el.textContent = `${d}d ${h}h ${m}m`;
+  }
+  tick(); setInterval(tick, 60000);
+})();
+
+/* ===== Tabs ===== */
+document.querySelectorAll('.tab').forEach(tab=>{
+  tab.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('panel-'+tab.dataset.panel).classList.add('active');
+  });
+});
+
+/* ===== UTM capture for waitlist ===== */
+(function(){
+  const qs=new URLSearchParams(location.search);
+  ['source','medium','campaign','content','term'].forEach(k=>{
+    const el=document.getElementById('utm_'+k);
+    if(el) el.value = qs.get('utm_'+k) || '';
+  });
+})();
+
+/* ===== Waitlist form ===== */
+(function(){
+  const form = document.getElementById('wl');
+  if(!form) return;
+  const thanks = document.getElementById('thanks');
+  const err = document.getElementById('error');
+  const FORM_ENDPOINT = ""; // ← paste your Formspree/ESP endpoint to go live
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    err.style.display='none';
+    const data = new FormData(form);
+    const payload = Object.fromEntries(data.entries());
+
+    // Local demo save
+    try {
+      const leads = JSON.parse(localStorage.getItem('tv_waitlist')||'[]');
+      leads.push({ ...payload, ts: Date.now() });
+      localStorage.setItem('tv_waitlist', JSON.stringify(leads));
+    } catch(_){}
+
+    // Live submission (if endpoint provided)
+    if(FORM_ENDPOINT){
+      try{
+        const res = await fetch(FORM_ENDPOINT, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
+        if(!res.ok) throw new Error('Bad response');
+      }catch(ex){
+        console.warn('Live submit failed:', ex);
       }
-      tick(); setInterval(tick, 60000);
-    })();
+    }
+    form.reset();
+    thanks.style.display='block';
+  });
+})();
 
-    // ===== UTM capture =====
-    (function(){
-      const qs=new URLSearchParams(location.search);
-      ['source','medium','campaign','content','term'].forEach(k=>{
-        const el=document.getElementById('utm_'+k);
-        if(el) el.value = qs.get('utm_'+k) || '';
-      });
-    })();
+/* ===== Archetype Quiz ===== */
+(function(){
+  const form = document.getElementById('archetypeForm');
+  const out = document.getElementById('archResult');
+  if(!form) return;
 
-    // ===== Form handling =====
-    (function(){
-      const form = document.getElementById('wl');
-      const thanks = document.getElementById('thanks');
-      const err = document.getElementById('error');
+  const archetypes = {
+    "overthinker": {
+      title: "The Overthinker",
+      blurb: "Mind races under load; goal is downshift on demand.",
+      drill: "Box breathing 4•4•4•4 for 3–5 min, then extend exhales (6–8s).",
+      plan: [
+        "AM: 5 min nasal box breathing + 2 min mobility",
+        "Midday: 3× sigh-reset (long exhale) before meetings",
+        "PM: 6–8s exhale breathing in low light, 5–8 min"
+      ]
+    },
+    "grinder": {
+      title: "The Grinder",
+      blurb: "You push hard; learn to toggle intensity and recover faster.",
+      drill: "Cadence breathing 4 in / 6 out while walking (10 min).",
+      plan: [
+        "AM: 6/6 cadence walk 10–15 min",
+        "Pre-workout: 2 min power breaths then nasal only",
+        "PM: 5 min downshift before sleep"
+      ]
+    },
+    "zen-surface": {
+      title: "Zen-on-Surface",
+      blurb: "Looks calm, tension stored inside; release + regulate.",
+      drill: "Breath-led mobility: 3-sec inhale / 7-sec exhale per rep.",
+      plan: [
+        "AM: 8 min mobility with slow exhale",
+        "Midday: body scan + 3 long exhales",
+        "PM: gentle coherent breathing 5/5 for 10 min"
+      ]
+    },
+    "balanced": {
+      title: "Balanced Performer",
+      blurb: "Solid baseline; layer performance protocols.",
+      drill: "CO₂ tolerance test + cadence 5/5; finish with 3 cool-down breaths.",
+      plan: [
+        "AM: 10 min coherent breathing 5/5",
+        "Pre-stress: 3 long exhales + focus cue",
+        "PM: 5 min downshift + journaling"
+      ]
+    }
+  };
 
-      // Set this to your real endpoint later (Formspree/MailerLite/ConvertKit).
-      // For Formspree, it looks like: https://formspree.io/f/xxxxabcd
-      const FORM_ENDPOINT = ""; // ← leave empty for local demo; paste real URL to go live
+  form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const counts = { "overthinker":0, "grinder":0, "zen-surface":0, "balanced":0 };
+    ['q1','q2','q3','q4'].forEach(q=>{
+      const v = new FormData(form).get(q);
+      if(v) counts[v] = (counts[v]||0) + 1;
+    });
+    const archetype = Object.entries(counts).sort((a,b)=>b[1]-a[1])[0][0];
+    const a = archetypes[archetype];
 
-      form.addEventListener('submit', async function(e){
-        e.preventDefault();
-        err.style.display='none';
+    out.style.display='block';
+    out.innerHTML = `
+      <div class="result">
+        <h4>${a.title}</h4>
+        <p class="muted">${a.blurb}</p>
+        <p><b>Today’s drill:</b> ${a.drill}</p>
+        <div class="tile">
+          <b>7-Day Mini-Plan</b>
+          <ul>${a.plan.map(x=>`<li>${x}</li>`).join('')}</ul>
+        </div>
+        <div class="qa">
+          <label>Email to receive a printable plan (optional)</label>
+          <div class="split">
+            <input id="archEmail" type="email" placeholder="you@example.com" />
+            <button id="archDownload">Download Plan</button>
+          </div>
+        </div>
+      </div>
+    `;
 
-        const data = new FormData(form);
-        const payload = Object.fromEntries(data.entries());
-
-        // Always save locally so you can demo immediately
-        try {
-          const leads = JSON.parse(localStorage.getItem('tv_waitlist')||'[]');
-          leads.push({ ...payload, ts: Date.now() });
-          localStorage.setItem('tv_waitlist', JSON.stringify(leads));
-        } catch(_) {}
-
-        // If you supplied an endpoint, attempt a real submission
-        if(FORM_ENDPOINT){
+    // download handler
+    setTimeout(()=>{
+      const btn = document.getElementById('archDownload');
+      btn?.addEventListener('click', ()=>{
+        const email = document.getElementById('archEmail')?.value.trim();
+        if(email){
           try{
-            const res = await fetch(FORM_ENDPOINT, {
-              method:'POST',
-              headers:{'Accept':'application/json'},
-              body: new FormData(form)
-            });
-            if(!res.ok) throw new Error('Network response was not ok');
-          }catch(ex){
-            // If live submit fails, still show local success so the demo flows
-            console.warn('Live submit failed:', ex);
-          }
+            const leads = JSON.parse(localStorage.getItem('tv_tools')||'[]');
+            leads.push({tool:'archetype', email, archetype, ts:Date.now()});
+            localStorage.setItem('tv_tools', JSON.stringify(leads));
+          }catch(_){}
         }
+        const text =
+`Tenable Vibrations — ${a.title}
+${a.blurb}
 
-        form.reset();
-        thanks.style.display='block';
+Today’s drill:
+- ${a.drill}
+
+7-Day Mini-Plan:
+- ${a.plan.join('\n- ')}
+
+Costa Rica Retreat • Jan 15–18, 2026
+Join the waitlist for early-bird access.`;
+        const blob = new Blob([text],{type:'text/plain'});
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url; link.download = `TV-${a.title.replace(/\s+/g,'_')}-MiniPlan.txt`;
+        document.body.appendChild(link); link.click(); link.remove();
+        URL.revokeObjectURL(url);
       });
-    })();
-  </script>
-</body>
-</html>
+    },50);
+  });
+})();
+
+/* ===== Choose-Your-Own Story ===== */
+(function(){
+  const story = document.getElementById('story');
+  const out = document.getElementById('storyResult');
+  if(!story) return;
+  let tags = [];
+
+  story.addEventListener('click', (e)=>{
+    const btn = e.target.closest('.choice');
+    if(btn){
+      const next = btn.dataset.next;
+      const tag = btn.dataset.tag;
+      if(tag) tags.push(tag);
+      story.querySelectorAll('.story-stage').forEach(s=>s.style.display='none');
+      const nxt = story.querySelector(`[data-step="${next}"]`);
+      if(nxt) nxt.style.display='block';
+    }
+    if(e.target.classList.contains('endstory')){
+      // Score persona
+      const tallies = tags.reduce((m,t)=>(m[t]=(m[t]||0)+1,m),{});
+      const persona = Object.entries(tallies).sort((a,b)=>b[1]-a[1])[0]?.[0] || 'clarity';
+      const map = {
+        clarity:{ title:'Clarity-Seeker', plan:['Coherent 5/5 AM 10 min','CO₂ test mid-day','Evening long exhale 6–8s'] },
+        adventure:{ title:'Stress-Breaker (Adventurer)', plan:['Cold immersion progression','Breath-led mobility 10 min','Downshift before sleep'] },
+        integration:{ title:'Integration-Focused', plan:['Morning journal + 3 long exhales','Guided breath journey','Community circle + reflection'] },
+        performance:{ title:'Performance-Chaser', plan:['Cadence walk 4/6','Pre-meeting focus cue','PM downshift 5 min'] },
+        community:{ title:'Community-Driver', plan:['Pair drills','Teach a 2-min reset to a friend','Evening circle + breath'] }
+      };
+      const p = map[persona] || map.clarity;
+
+      out.style.display='block';
+      out.innerHTML = `
+        <div class="result">
+          <h4>Your persona: ${p.title}</h4>
+          <p class="muted">Here’s a mini-itinerary that matches how you like to move.</p>
+          <div class="tile">
+            <b>Custom Day Plan</b>
+            <ul>${p.plan.map(x=>`<li>${x}</li>`).join('')}</ul>
+          </div>
+          <div class="qa">
+            <label>Email to send a pretty version (optional)</label>
+            <div class="split">
+              <input id="storyEmail" type="email" placeholder="you@example.com" />
+              <button id="storyDownload">Download Itinerary</button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      setTimeout(()=>{
+        document.getElementById('storyDownload')?.addEventListener('click', ()=>{
+          const email = document.getElementById('storyEmail')?.value.trim();
+          if(email){
+            try{
+              const leads = JSON.parse(localStorage.getItem('tv_tools')||'[]');
+              leads.push({tool:'story', email, persona:p.title, ts:Date.now()});
+              localStorage.setItem('tv_tools', JSON.stringify(leads));
+            }catch(_){}
+          }
+          const text = `Tenable Vibrations — ${p.title}\nMini-Itinerary:\n- ${p.plan.join('\n- ')}\n\nCosta Rica Retreat • Jan 15–18, 2026\nJoin the waitlist for early-bird access.`;
+          const blob = new Blob([text],{type:'text/plain'});
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url; link.download = `TV-${p.title.replace(/\s+/g,'_')}-Itinerary.txt`;
+          document.body.appendChild(link); link.click(

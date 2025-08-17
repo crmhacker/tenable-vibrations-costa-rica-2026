@@ -9,84 +9,105 @@
 <meta property="og:description" content="Reset your nervous system in Costa Rica. Get your personalized plan now." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1600&auto=format&fit=crop" />
-<meta name="theme-color" content="#0f5f5f" />
+<meta name="theme-color" content="#0b2f2f" />
 <link rel="preconnect" href="https://images.unsplash.com">
 
 <style>
-  /* ====== Tropical Theme ====== */
+  /* ====== Tropical Theme (higher contrast) ====== */
   :root{
     --bg:#052b2b;         /* deep teal */
     --bg2:#0a3f3f;
-    --card:#0f2f2f;       /* dark card */
-    --glass:rgba(255,255,255,.06);
-    --line:rgba(255,255,255,.14);
+    --hero-overlay: rgba(2,12,12,.68); /* darker overlay for readability */
+    --card: rgba(7,20,22,.82);  /* darker glass for legibility */
+    --solid: #0b2223;
+    --line: rgba(255,255,255,.18);
     --text:#f6fbff;
-    --muted:#bfe2e2;
+    --muted:#c7e4e4;
     --accent:#7ef7d6;     /* aqua */
     --accent2:#ffd07a;    /* sun */
     --rose:#ff9aa2;
+    --shadow: 0 18px 50px rgba(0,0,0,.45);
   }
   *{box-sizing:border-box}
-  html,body{margin:0;padding:0;color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg)}
+  html,body{
+    margin:0;padding:0;color:var(--text);
+    font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg)
+  }
   a{color:var(--accent);text-decoration:none}
   .wrap{max-width:1160px;margin:0 auto;padding:22px}
-  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.15));backdrop-filter:blur(8px)}
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:linear-gradient(180deg,rgba(0,0,0,.7),rgba(0,0,0,.25));
+    backdrop-filter: blur(8px);
+  }
   .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
   .brand{display:flex;align-items:center;gap:10px}
-  .brand .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#5ae9ff);box-shadow:0 0 0 3px rgba(126,247,214,.2)}
+  .brand .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#5ae9ff);box-shadow:0 0 0 3px rgba(126,247,214,.25)}
   .brand b{letter-spacing:.3px}
-  .links a{margin-left:14px;font-weight:600;opacity:.9}
+  .links a{margin-left:14px;font-weight:700;opacity:.95}
   .hero{
     position:relative; isolation:isolate;
     background:
-      linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.65)),
+      linear-gradient(180deg,var(--hero-overlay),var(--hero-overlay)),
       url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1950&auto=format&fit=crop');
     background-size:cover;background-position:center;
   }
-  .hero .wrap{padding:64px 22px 36px}
-  .badge{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid var(--line);color:var(--accent2);font-weight:700}
-  h1{font-size:50px;line-height:1.05;margin:10px 0 10px;text-shadow:0 6px 28px rgba(0,0,0,.35)}
-  p.lead{font-size:18px;color:#eaf7f7;max-width:720px}
+  .hero .wrap{padding:72px 22px 40px}
+  .badge{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--line);color:var(--accent2);font-weight:800}
+  h1{font-size:50px;line-height:1.05;margin:10px 0 10px;text-shadow:0 6px 28px rgba(0,0,0,.6)}
+  p.lead{font-size:18px;color:#ecf8f8;max-width:780px}
   .grid{display:grid;gap:20px}
   .cols-2{grid-template-columns:1.2fr 1fr}
   .cols-3{grid-template-columns:repeat(3,1fr)}
-  .card{background:var(--glass);border:1px solid var(--line);border-radius:20px;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(6px);
+  }
+  .card--solid{background:var(--solid)} /* even stronger contrast */
   .pad{padding:22px}
-  label{font-weight:700;font-size:14px;margin-bottom:6px;display:block}
-  input,select,button,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:rgba(5,25,25,.6);color:var(--text);font-size:15px}
+  label{font-weight:800;font-size:14px;margin-bottom:6px;display:block}
+  input,select,button,textarea{
+    width:100%;padding:12px 14px;border-radius:12px;
+    border:1px solid var(--line);
+    background:#0b1e20;color:var(--text);font-size:15px
+  }
   button{cursor:pointer;background:linear-gradient(135deg,var(--accent),#5ae9ff);color:#022; font-weight:900;letter-spacing:.3px;border:none}
   button:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(122,241,218,.35)}
+  button:disabled{opacity:.6;cursor:not-allowed}
   .stat{padding:16px;border-radius:14px;background:rgba(255,255,255,.08);border:1px dashed var(--line);text-align:center}
   .countdown{font-variant-numeric:tabular-nums;font-weight:800;color:var(--accent2)}
   .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--line);font-size:13px}
-  .section{margin:28px 0}
+  .section{margin:32px 0}
   .section h2{font-size:28px;margin:0 0 8px}
   .muted{color:var(--muted)}
-  .accent{color:var(--accent)}
   .split{display:grid;gap:18px;grid-template-columns:1fr 1fr}
   .qa{display:grid;gap:12px}
-  .qa .q{font-weight:700}
   .faq p{margin:10px 0}
   .tabs{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
-  .tab{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);cursor:pointer;font-weight:700}
+  .tab{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);cursor:pointer;font-weight:800}
   .tab.active{background:linear-gradient(135deg,var(--accent2),#ffc56a);color:#222}
   .panel{display:none}
   .panel.active{display:block}
-  .tile{padding:16px;border:1px solid var(--line);border-radius:14px;margin:10px 0;background:rgba(255,255,255,.05)}
+  .tile{padding:16px;border:1px solid var(--line);border-radius:14px;margin:10px 0;background:rgba(255,255,255,.06)}
   .opt{display:flex;gap:10px;align-items:flex-start;margin:10px 0}
   .opt input{width:auto}
   .result{border-left:4px solid var(--accent);padding-left:14px}
-  .story-stage{padding:14px;border-left:3px solid var(--accent2); margin:14px 0;background:rgba(255,255,255,.06);border-radius:12px}
+  .story-stage{padding:14px;border-left:3px solid var(--accent2); margin:14px 0;background:rgba(255,255,255,.07);border-radius:12px}
   .kpi{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
-  .footer{opacity:.85;padding:30px 0}
+  .footer{opacity:.9;padding:30px 0}
   .bg-fronds{
-    position:absolute; inset:0; pointer-events:none; opacity:.3; 
+    position:absolute; inset:0; pointer-events:none; opacity:.28;
     background:
       url('https://images.unsplash.com/photo-1606923829579-0cb981a83e2e?q=80&w=2200&auto=format&fit=crop') top left / 700px no-repeat,
       url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=2200&auto=format&fit=crop') bottom right / 900px no-repeat;
     filter:saturate(1.1) hue-rotate(-10deg);
   }
   @media (max-width:980px){ .cols-2,.cols-3,.kpi,.split{grid-template-columns:1fr} h1{font-size:38px}}
+  @media (prefers-reduced-motion: reduce){ *{scroll-behavior:auto} }
 </style>
 
 <script type="application/ld+json">
@@ -132,7 +153,7 @@
     <p class="lead">Three and a half days of breathwork, cold immersion, movement, and nature—built for high-performers who want clarity, resilience, and sustainable energy.</p>
 
     <div class="grid cols-2 section">
-      <div class="card pad">
+      <div class="card card--solid pad">
         <div class="grid cols-3">
           <div class="stat"><div class="muted">Countdown</div><div id="cd" class="countdown">—</div></div>
           <div class="stat"><div class="muted">Format</div><div><strong>Small group</strong> • 16 spots</div></div>
@@ -142,7 +163,7 @@
       </div>
 
       <!-- Waitlist -->
-      <div class="card pad" id="waitlist">
+      <div class="card card--solid pad" id="waitlist">
         <h2>Get early access</h2>
         <p class="muted">Join the waitlist for early-bird pricing, first access to rooms, and a free “7-Day Nervous-System Reset.”</p>
 
@@ -174,7 +195,7 @@
           <input type="hidden" name="utm_content" id="utm_content">
           <input type="hidden" name="utm_term" id="utm_term">
 
-          <button type="submit">Join the Waitlist</button>
+          <button id="wlBtn" type="submit">Join the Waitlist</button>
           <small class="muted">We’ll never spam. Unsubscribe anytime.</small>
         </form>
 
@@ -203,12 +224,12 @@
 
     <!-- Panel 1: Archetype Quiz -->
     <div class="panel active card pad" id="panel-archetype">
-      <h3>Archetype Quiz (2–3 min)</h3>
+      <h3>Nervous System Archetype (2–3 min)</h3>
       <p class="muted">Answer a few quick questions to reveal your profile and get a targeted drill.</p>
 
       <form id="archetypeForm">
         <div class="tile">
-          <div class="q">1) When stress spikes, what happens first?</div>
+          <div><b>1)</b> When stress spikes, what happens first?</div>
           <label class="opt"><input type="radio" name="q1" value="overthinker" required> Mind races; hard to slow thoughts</label>
           <label class="opt"><input type="radio" name="q1" value="grinder"> Power through; body feels wired</label>
           <label class="opt"><input type="radio" name="q1" value="zen-surface"> Look calm outside; tight inside</label>
@@ -216,7 +237,7 @@
         </div>
 
         <div class="tile">
-          <div class="q">2) Mid-afternoon energy feels…</div>
+          <div><b>2)</b> Mid-afternoon energy feels…</div>
           <label class="opt"><input type="radio" name="q2" value="overthinker" required> Mentally fried</label>
           <label class="opt"><input type="radio" name="q2" value="grinder"> Jittery but pushing</label>
           <label class="opt"><input type="radio" name="q2" value="zen-surface"> Flat but pretending fine</label>
@@ -224,7 +245,7 @@
         </div>
 
         <div class="tile">
-          <div class="q">3) Sleep pattern most nights?</div>
+          <div><b>3)</b> Sleep pattern most nights?</div>
           <label class="opt"><input type="radio" name="q3" value="overthinker" required> Hard to fall asleep</label>
           <label class="opt"><input type="radio" name="q3" value="grinder"> Crash fast, wake wired</label>
           <label class="opt"><input type="radio" name="q3" value="zen-surface"> Light/uneven, body feels tense</label>
@@ -232,14 +253,14 @@
         </div>
 
         <div class="tile">
-          <div class="q">4) Training preference today?</div>
+          <div><b>4)</b> Training preference today?</div>
           <label class="opt"><input type="radio" name="q4" value="overthinker" required> Downshift the mind</label>
           <label class="opt"><input type="radio" name="q4" value="grinder"> Channel intensity</label>
           <label class="opt"><input type="radio" name="q4" value="zen-surface"> Release hidden tension</label>
           <label class="opt"><input type="radio" name="q4" value="balanced"> Performance tune-up</label>
         </div>
 
-        <button type="submit">See my archetype</button>
+        <button id="archBtn" type="submit">See my archetype</button>
       </form>
 
       <div id="archResult" style="display:none;margin-top:16px"></div>
@@ -254,43 +275,43 @@
         <div class="story-stage" data-step="1">
           <b>Dawn in Costa Rica.</b> You wake to ocean air and birdsong. First move?
           <div class="qa">
-            <button class="choice" data-next="2a" data-tag="clarity">Guided breath by the beach</button>
-            <button class="choice" data-next="2b" data-tag="adventure">Ocean dip / cold immersion</button>
-            <button class="choice" data-next="2c" data-tag="integration">Journal under a palm</button>
+            <button class="choice" data-next="2a" data-tag="clarity" type="button">Guided breath by the beach</button>
+            <button class="choice" data-next="2b" data-tag="adventure" type="button">Ocean dip / cold immersion</button>
+            <button class="choice" data-next="2c" data-tag="integration" type="button">Journal under a palm</button>
           </div>
         </div>
 
         <div class="story-stage" data-step="2a" style="display:none">
           <b>Beach breath.</b> Slow nasal breathing settles your system. What now?
           <div class="qa">
-            <button class="choice" data-next="3a" data-tag="clarity">CO₂ tolerance test</button>
-            <button class="choice" data-next="3b" data-tag="community">Invite two others to join</button>
+            <button class="choice" data-next="3a" data-tag="clarity" type="button">CO₂ tolerance test</button>
+            <button class="choice" data-next="3b" data-tag="community" type="button">Invite two others to join</button>
           </div>
         </div>
 
         <div class="story-stage" data-step="2b" style="display:none">
           <b>Cold immersion.</b> You enter calmly, exhale slow. Next?
           <div class="qa">
-            <button class="choice" data-next="3c" data-tag="performance">Mobility flow</button>
-            <button class="choice" data-next="3d" data-tag="adventure">Beach run</button>
+            <button class="choice" data-next="3c" data-tag="performance" type="button">Mobility flow</button>
+            <button class="choice" data-next="3d" data-tag="adventure" type="button">Beach run</button>
           </div>
         </div>
 
         <div class="story-stage" data-step="2c" style="display:none">
           <b>Journaling.</b> You write one intention. Next?
           <div class="qa">
-            <button class="choice" data-next="3e" data-tag="integration">Integration circle</button>
-            <button class="choice" data-next="3f" data-tag="clarity">Guided breath journey</button>
+            <button class="choice" data-next="3e" data-tag="integration" type="button">Integration circle</button>
+            <button class="choice" data-next="3f" data-tag="clarity" type="button">Guided breath journey</button>
           </div>
         </div>
 
         <!-- End nodes -->
-        <div class="story-stage" data-step="3a" style="display:none"><b>Nice.</b> Your awareness grows. <button class="endstory">Finish</button></div>
-        <div class="story-stage" data-step="3b" style="display:none"><b>Leadership.</b> You bring others along. <button class="endstory">Finish</button></div>
-        <div class="story-stage" data-step="3c" style="display:none"><b>Strong choice.</b> You balance stress with mobility. <button class="endstory">Finish</button></div>
-        <div class="story-stage" data-step="3d" style="display:none"><b>Power on.</b> You crave challenge. <button class="endstory">Finish</button></div>
-        <div class="story-stage" data-step="3e" style="display:none"><b>Community.</b> You heal in circles. <button class="endstory">Finish</button></div>
-        <div class="story-stage" data-step="3f" style="display:none"><b>Depth work.</b> Ready for inner shifts. <button class="endstory">Finish</button></div>
+        <div class="story-stage" data-step="3a" style="display:none"><b>Nice.</b> Your awareness grows. <button class="endstory" type="button">Finish</button></div>
+        <div class="story-stage" data-step="3b" style="display:none"><b>Leadership.</b> You bring others along. <button class="endstory" type="button">Finish</button></div>
+        <div class="story-stage" data-step="3c" style="display:none"><b>Strong choice.</b> You balance stress with mobility. <button class="endstory" type="button">Finish</button></div>
+        <div class="story-stage" data-step="3d" style="display:none"><b>Power on.</b> You crave challenge. <button class="endstory" type="button">Finish</button></div>
+        <div class="story-stage" data-step="3e" style="display:none"><b>Community.</b> You heal in circles. <button class="endstory" type="button">Finish</button></div>
+        <div class="story-stage" data-step="3f" style="display:none"><b>Depth work.</b> Ready for inner shifts. <button class="endstory" type="button">Finish</button></div>
       </div>
 
       <div id="storyResult" style="display:none;margin-top:16px"></div>
@@ -303,36 +324,36 @@
 
       <form id="readyForm">
         <div class="tile">
-          <div class="q">1) How many deep sighs or mouth breaths before noon?</div>
+          <div><b>1)</b> How many deep sighs or mouth breaths before noon?</div>
           <label class="opt"><input type="radio" name="r1" value="0" required> 0–1</label>
           <label class="opt"><input type="radio" name="r1" value="-5"> 2–4</label>
           <label class="opt"><input type="radio" name="r1" value="-10"> 5+</label>
         </div>
         <div class="tile">
-          <div class="q">2) Screen time yesterday?</div>
+          <div><b>2)</b> Screen time yesterday?</div>
           <label class="opt"><input type="radio" name="r2" value="5" required> ≤3h</label>
           <label class="opt"><input type="radio" name="r2" value="0"> 3–6h</label>
           <label class="opt"><input type="radio" name="r2" value="-5"> 6h+</label>
         </div>
         <div class="tile">
-          <div class="q">3) Comfortable breath-hold (after normal exhale)?</div>
+          <div><b>3)</b> Comfortable breath-hold (after normal exhale)?</div>
           <label class="opt"><input type="radio" name="r3" value="-5" required> <15s</label>
           <label class="opt"><input type="radio" name="r3" value="0"> 15–25s</label>
           <label class="opt"><input type="radio" name="r3" value="5"> >25s</label>
         </div>
         <div class="tile">
-          <div class="q">4) Sleep quality last 3 nights?</div>
+          <div><b>4)</b> Sleep quality last 3 nights?</div>
           <label class="opt"><input type="radio" name="r4" value="-5" required> Poor</label>
           <label class="opt"><input type="radio" name="r4" value="0"> Mixed</label>
           <label class="opt"><input type="radio" name="r4" value="5"> Good</label>
         </div>
         <div class="tile">
-          <div class="q">5) Current stress (feel truthfully)?</div>
+          <div><b>5)</b> Current stress (feel truthfully)?</div>
           <label class="opt"><input type="radio" name="r5" value="-10" required> High</label>
           <label class="opt"><input type="radio" name="r5" value="-5"> Medium</label>
           <label class="opt"><input type="radio" name="r5" value="0"> Low</label>
         </div>
-        <button type="submit">Get my score</button>
+        <button id="readyBtn" type="submit">Get my score</button>
       </form>
 
       <div id="readyResult" style="display:none;margin-top:16px"></div>
@@ -373,6 +394,9 @@
 </footer>
 
 <script>
+/* Helpers */
+const smoothScrollTo = (el)=>{ try{ el.scrollIntoView({behavior:'smooth', block:'start'});}catch(_){ location.hash='#'+el.id; } };
+
 /* ===== Countdown ===== */
 (function(){
   const target = new Date('2026-01-15T08:00:00-06:00'); // adjust TZ if needed
@@ -395,7 +419,9 @@ document.querySelectorAll('.tab').forEach(tab=>{
     document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
     document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
     tab.classList.add('active');
-    document.getElementById('panel-'+tab.dataset.panel).classList.add('active');
+    const p = document.getElementById('panel-'+tab.dataset.panel);
+    p.classList.add('active');
+    smoothScrollTo(p);
   });
 });
 
@@ -414,11 +440,14 @@ document.querySelectorAll('.tab').forEach(tab=>{
   if(!form) return;
   const thanks = document.getElementById('thanks');
   const err = document.getElementById('error');
+  const btn = document.getElementById('wlBtn');
   const FORM_ENDPOINT = ""; // ← paste your Formspree/ESP endpoint to go live
 
   form.addEventListener('submit', async function(e){
     e.preventDefault();
     err.style.display='none';
+    btn.disabled = true;
+
     const data = new FormData(form);
     const payload = Object.fromEntries(data.entries());
 
@@ -440,13 +469,16 @@ document.querySelectorAll('.tab').forEach(tab=>{
     }
     form.reset();
     thanks.style.display='block';
+    btn.disabled = false;
+    smoothScrollTo(thanks);
   });
 })();
 
-/* ===== Archetype Quiz ===== */
+/* ===== Archetype Quiz (improved UX) ===== */
 (function(){
   const form = document.getElementById('archetypeForm');
   const out = document.getElementById('archResult');
+  const btn = document.getElementById('archBtn');
   if(!form) return;
 
   const archetypes = {
@@ -494,8 +526,19 @@ document.querySelectorAll('.tab').forEach(tab=>{
 
   form.addEventListener('submit', (e)=>{
     e.preventDefault();
+    btn.disabled = true;
+
+    // Validate all questions answered
+    const requiredQs = ['q1','q2','q3','q4'];
+    for(const q of requiredQs){
+      if(!new FormData(form).get(q)){
+        alert('Please answer all questions.'); btn.disabled=false; return;
+      }
+    }
+
+    // Tally answers → archetype
     const counts = { "overthinker":0, "grinder":0, "zen-surface":0, "balanced":0 };
-    ['q1','q2','q3','q4'].forEach(q=>{
+    requiredQs.forEach(q=>{
       const v = new FormData(form).get(q);
       if(v) counts[v] = (counts[v]||0) + 1;
     });
@@ -504,8 +547,8 @@ document.querySelectorAll('.tab').forEach(tab=>{
 
     out.style.display='block';
     out.innerHTML = `
-      <div class="result">
-        <h4>${a.title}</h4>
+      <div class="result" id="archAnchor">
+        <h4>Your Archetype: <span class="accent">${a.title}</span></h4>
         <p class="muted">${a.blurb}</p>
         <p><b>Today’s drill:</b> ${a.drill}</p>
         <div class="tile">
@@ -516,16 +559,18 @@ document.querySelectorAll('.tab').forEach(tab=>{
           <label>Email to receive a printable plan (optional)</label>
           <div class="split">
             <input id="archEmail" type="email" placeholder="you@example.com" />
-            <button id="archDownload">Download Plan</button>
+            <button id="archDownload" type="button">Download Plan</button>
           </div>
         </div>
       </div>
     `;
+    smoothScrollTo(document.getElementById('archAnchor'));
+    btn.disabled = false;
 
     // download handler
     setTimeout(()=>{
-      const btn = document.getElementById('archDownload');
-      btn?.addEventListener('click', ()=>{
+      const dl = document.getElementById('archDownload');
+      dl?.addEventListener('click', ()=>{
         const email = document.getElementById('archEmail')?.value.trim();
         if(email){
           try{
@@ -575,7 +620,6 @@ Join the waitlist for early-bird access.`;
       if(nxt) nxt.style.display='block';
     }
     if(e.target.classList.contains('endstory')){
-      // Score persona
       const tallies = tags.reduce((m,t)=>(m[t]=(m[t]||0)+1,m),{});
       const persona = Object.entries(tallies).sort((a,b)=>b[1]-a[1])[0]?.[0] || 'clarity';
       const map = {
@@ -589,8 +633,8 @@ Join the waitlist for early-bird access.`;
 
       out.style.display='block';
       out.innerHTML = `
-        <div class="result">
-          <h4>Your persona: ${p.title}</h4>
+        <div class="result" id="storyAnchor">
+          <h4>Your persona: <span class="accent">${p.title}</span></h4>
           <p class="muted">Here’s a mini-itinerary that matches how you like to move.</p>
           <div class="tile">
             <b>Custom Day Plan</b>
@@ -600,11 +644,12 @@ Join the waitlist for early-bird access.`;
             <label>Email to send a pretty version (optional)</label>
             <div class="split">
               <input id="storyEmail" type="email" placeholder="you@example.com" />
-              <button id="storyDownload">Download Itinerary</button>
+              <button id="storyDownload" type="button">Download Itinerary</button>
             </div>
           </div>
         </div>
       `;
+      smoothScrollTo(document.getElementById('storyAnchor'));
 
       setTimeout(()=>{
         document.getElementById('storyDownload')?.addEventListener('click', ()=>{
@@ -621,4 +666,89 @@ Join the waitlist for early-bird access.`;
           const url = URL.createObjectURL(blob);
           const link = document.createElement('a');
           link.href = url; link.download = `TV-${p.title.replace(/\s+/g,'_')}-Itinerary.txt`;
-          document.body.appendChild(link); link.click(
+          document.body.appendChild(link); link.click(); link.remove();
+          URL.revokeObjectURL(url);
+        });
+      },50);
+    }
+  });
+})();
+
+/* ===== Readiness Score ===== */
+(function(){
+  const form = document.getElementById('readyForm');
+  const out = document.getElementById('readyResult');
+  const btn = document.getElementById('readyBtn');
+  if(!form) return;
+
+  form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    btn.disabled = true;
+
+    const fd = new FormData(form);
+    // ensure all answered
+    for(const k of ['r1','r2','r3','r4','r5']){ if(!fd.get(k)){ alert('Please answer all questions.'); btn.disabled=false; return; } }
+
+    let score = 50; // baseline
+    ['r1','r2','r3','r4','r5'].forEach(k=> score += parseInt(fd.get(k)||'0',10));
+    let tier = 'Beginner', color = 'var(--rose)', plan = [
+      'Coherent breathing 5/5 for 6–8 min daily',
+      '3× long-exhale resets before meetings',
+      'Low-light downshift 5 min before sleep'
+    ];
+    if(score>=60 && score<75){ tier='Intermediate'; color='var(--accent2)'; plan=[
+      'Cadence walk 4/6 for 12 min',
+      'CO₂ tolerance test 2×/week',
+      'Evening 6–8s exhale breathing 8–10 min'
+    ];}
+    if(score>=75){ tier='Advanced'; color='var(--accent)'; plan=[
+      'Coherent 5/5 (10–12 min) + nasal training',
+      'Pre-stress protocol: 3 long exhales + focus cue',
+      'Cold progression 2–3×/week with controlled breathing'
+    ];}
+
+    out.style.display='block';
+    out.innerHTML = `
+      <div class="result" id="readyAnchor">
+        <h4>Your Readiness Score: <span style="color:${color}">${score}</span> / 100 — ${tier}</h4>
+        <p class="muted">Here’s a 7-day progression based on your score.</p>
+        <div class="tile">
+          <b>7-Day Progression</b>
+          <ul>${plan.map(x=>`<li>${x}</li>`).join('')}</ul>
+        </div>
+        <div class="qa">
+          <label>Email to receive a printable plan (optional)</label>
+          <div class="split">
+            <input id="readyEmail" type="email" placeholder="you@example.com" />
+            <button id="readyDownload" type="button">Download Plan</button>
+          </div>
+        </div>
+      </div>
+    `;
+    smoothScrollTo(document.getElementById('readyAnchor'));
+    btn.disabled = false;
+
+    setTimeout(()=>{
+      document.getElementById('readyDownload')?.addEventListener('click', ()=>{
+        const email = document.getElementById('readyEmail')?.value.trim();
+        if(email){
+          try{
+            const leads = JSON.parse(localStorage.getItem('tv_tools')||'[]');
+            leads.push({tool:'readiness', email, score, tier, ts:Date.now()});
+            localStorage.setItem('tv_tools', JSON.stringify(leads));
+          }catch(_){}
+        }
+        const text = `Tenable Vibrations — Readiness ${score}/100 (${tier})\n7-Day Plan:\n- ${plan.join('\n- ')}\n\nCosta Rica Retreat • Jan 15–18, 2026\nJoin the waitlist for early-bird access.`;
+        const blob = new Blob([text],{type:'text/plain'});
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url; link.download = `TV-Readiness-${score}.txt`;
+        document.body.appendChild(link); link.click(); link.remove();
+        URL.revokeObjectURL(url);
+      });
+    },50);
+  });
+})();
+</script>
+</body>
+</html>
